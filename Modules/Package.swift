@@ -60,13 +60,14 @@ let package = Package(
             name: "CoreProviders",
             dependencies: [
                 "RootElements"
-            ]
+            ],
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "CoreProviders-Tests",
             dependencies: [
                 "CoreProviders"
-            ]
+            ], resources: [.copy("Resources")]
         ),
 
         /// This modules contains the app tweets displayer
