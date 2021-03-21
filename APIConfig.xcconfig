@@ -1,0 +1,12 @@
+//
+//  APIConfig.xcconfig
+//  MoodAnalyzer
+//
+//  Created by Gabriel Soria Souza on 21/03/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+MOOD_API = language.googleapis.com/v1beta2/documents:analyzeSentiment?key=
+MOOD_API_KEY = AIzaSyCKtiqIHsgnSNR9Y-HJD-UeUMXCKNx3paA
