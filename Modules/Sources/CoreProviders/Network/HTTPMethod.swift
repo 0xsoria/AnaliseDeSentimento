@@ -11,3 +11,10 @@ public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
 }
+
+public enum ConstantKeys {
+    public struct APIKeys {
+        public static let contentType = "Content-Type"
+        public static let applicationJSON = "application/json"
+    }
+}

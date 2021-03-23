@@ -324,6 +324,7 @@
 /* Begin XCBuildConfiguration section */
 		1563B6F02607C91F002EBCEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1563B71F2607D56E002EBCEB /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
