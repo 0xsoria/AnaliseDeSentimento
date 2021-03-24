@@ -45,6 +45,7 @@ public final class MoodAnalyzerViewController: UIViewController {
 extension MoodAnalyzerViewController: MoodCheckerDelegate {
     func didReceive(_ mood: String) {
         self.mainView.setupMoodLabel(mood)
+        self.mainView.setLoadingView(false)
     }
     
     func didReceiveError() {
