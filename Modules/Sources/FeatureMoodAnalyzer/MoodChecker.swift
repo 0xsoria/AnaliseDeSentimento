@@ -18,10 +18,10 @@ protocol MoodCheckable {
 }
 
 final class MoodChecker: MoodCheckable {
-
+    
     weak var moodCheckerDelegate: MoodCheckerDelegate?
     private let moodNetwork: MoodNetworkable
-
+    
     init(moodNetwork: MoodNetworkable) {
         self.moodNetwork = moodNetwork
     }

@@ -18,14 +18,14 @@ protocol UserRequestable {
 }
 
 final class UserRequester: UserRequestable {
-
+    
     weak var userRequesterDelegate: UserRequesterDelegate?
     private let network: UserNetworkable
     
     init(network: UserNetworkable) {
         self.network = network
     }
-
+    
     func fetchUser(_ userName: String) {
         self.fetchUserTweets(userName)
     }
@@ -34,13 +34,9 @@ final class UserRequester: UserRequestable {
         self.network.requestUserTweets(for: userName) { (result: Result<TwitterUserWithData, Error>) in
             switch result {
             case .success(let userTweets):
-                DispatchQueue.main.async {
-                    self.userRequesterDelegate?.didReceive(userTweets)
-                }
+                self.userRequesterDelegate?.didReceive(userTweets)
             case .failure:
-                DispatchQueue.main.async {
-                    self.userRequesterDelegate?.didReceiveError()
-                }
+                self.userRequesterDelegate?.didReceiveError()
             }
         }
     }

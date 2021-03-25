@@ -11,7 +11,7 @@ import CoreProviders
 
 final class NetworkSpySuccess: NetworkServiceable {
     func request(model: NetworkDataModel, completion: @escaping ((Result<Data, NetworkError>) -> Void)) {
-        if model.urlString == "https:///user" {
+        if model.urlString == "https://user" {
             let encoded = """
             {"data":{"id":"012938019283","name":"name name","username":"usernamehere"}}
             """.data(using: .utf8)

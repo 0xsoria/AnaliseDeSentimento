@@ -34,11 +34,11 @@ public final class MoodAnalyzerViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.moodChecker.checkMood(for: self.tweet)
+        self.mainView.setLoadingView(true)
     }
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.mainView.setLoadingView(true)
     }
 }
 

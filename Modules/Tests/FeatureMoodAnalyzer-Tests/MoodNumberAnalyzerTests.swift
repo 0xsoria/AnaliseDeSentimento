@@ -15,16 +15,16 @@ final class MoodNumberAnalyzerTests: XCTestCase {
         let randomHappy = Double.random(in: 0.5...1)
         let happy = MoodNumbersAnalyzer(magnitude: 1.0, score: randomHappy)
         let result = happy.analyze()
-        XCTAssertTrue(result == "😁")
+        XCTAssertTrue(result == "Feliz 😁")
         
         let randomNeutral = Double.random(in: 0.1...0.4)
         let neutral = MoodNumbersAnalyzer(magnitude: 1.0, score: randomNeutral)
         let resultNeutral = neutral.analyze()
-        XCTAssertTrue(resultNeutral == "😐")
+        XCTAssertTrue(resultNeutral == "Neutro 😐")
         
         let randomUnhappy = Double.random(in: (-1.0)...0.0)
         let unhappy = MoodNumbersAnalyzer(magnitude: 1.0, score: randomUnhappy)
         let resultUnhappy = unhappy.analyze()
-        XCTAssertTrue(resultUnhappy == "☹️")
+        XCTAssertTrue(resultUnhappy == "Triste ☹️")
     }
 }

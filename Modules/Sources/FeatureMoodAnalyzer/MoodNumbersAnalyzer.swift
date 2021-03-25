@@ -19,13 +19,13 @@ final class MoodNumbersAnalyzer {
     func analyze() -> String {
         switch score {
         case 0.5...1:
-            return "😁"
+            return "Feliz 😁"
         case 0.1...0.4:
-            return "😐"
+            return "Neutro 😐"
         case (-1.0)...0.0:
-            return "☹️"
+            return "Triste ☹️"
         default:
-            return "😐"
+            return "Neutro 😐"
         }
     }
 }
