@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserRequesterDelegate: AnyObject {
-    func didReceive(_ user: [TweetData])
+    func didReceive(_ user: TwitterUserWithData)
     func didReceiveError()
 }
 
@@ -31,12 +31,16 @@ final class UserRequester: UserRequestable {
     }
     
     private func fetchUserTweets(_ userName: String) {
-        self.network.requestUserTweets(for: userName) { (result: Result<[TweetData], Error>) in
+        self.network.requestUserTweets(for: userName) { (result: Result<TwitterUserWithData, Error>) in
             switch result {
             case .success(let userTweets):
-                self.userRequesterDelegate?.didReceive(userTweets)
+                DispatchQueue.main.async {
+                    self.userRequesterDelegate?.didReceive(userTweets)
+                }
             case .failure:
-                self.userRequesterDelegate?.didReceiveError()
+                DispatchQueue.main.async {
+                    self.userRequesterDelegate?.didReceiveError()
+                }
             }
         }
     }

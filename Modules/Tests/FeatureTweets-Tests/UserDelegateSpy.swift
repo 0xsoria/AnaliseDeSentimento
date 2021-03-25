@@ -12,7 +12,7 @@ final class UserDelegateSpy: UserRequesterDelegate {
     var didReceiveTweetsCalled = false
     var didReceiveErrorCalled = false
     
-    func didReceive(_ user: [TweetData]) {
+    func didReceive(_ user: TwitterUserWithData) {
         self.didReceiveTweetsCalled = true
     }
     

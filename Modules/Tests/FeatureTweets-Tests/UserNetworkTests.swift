@@ -16,11 +16,11 @@ final class UserNetworkTests: XCTestCase {
     func testUserSuccess() {
         self.userNetwork = UserNetwork(network: NetworkSpySuccess())
         let expectation = XCTestExpectation(description: "expectation")
-        self.userNetwork?.requestUserTweets(for: "user", completion: { (result: Result<[TweetData], Error>) in
+        self.userNetwork?.requestUserTweets(for: "user", completion: { (result: Result<TwitterUserWithData, Error>) in
             switch result {
             case .success(let successData):
                 expectation.fulfill()
-                XCTAssertFalse(successData.isEmpty)
+                XCTAssertFalse(successData.tweets.isEmpty)
             case .failure:
                 expectation.fulfill()
                 XCTFail()

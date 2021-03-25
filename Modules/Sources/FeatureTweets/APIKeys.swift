@@ -15,3 +15,9 @@ enum APIKeys {
         static let applicationJSON = "application/json"
     }
 }
+
+enum FeatureStrings {
+    struct TableViewCellStrings {
+        static let tweetCell = "cell"
+    }
+}

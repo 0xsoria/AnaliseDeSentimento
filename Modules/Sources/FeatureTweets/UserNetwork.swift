@@ -10,53 +10,43 @@ import Foundation
 import RootElements
 
 protocol UserNetworkable {
-    func requestUserTweets(for userName: String, completion: @escaping ((Result<[TweetData], Error>) -> Void))
+    func requestUserTweets(for userName: String, completion: @escaping ((Result<TwitterUserWithData, Error>) -> Void))
 }
 
 final class UserNetwork: UserNetworkable {
 
+    private var user: TwitterUser?
     private let network: NetworkServiceable
-    private let apiHeaders = [APIKeys.Constants.contentType: APIKeys.Constants.applicationJSON,
-                              APIKeys.Constants.bearerHeader: "\(APIKeys.Constants.bearerHeader)\(PlistKey.twitterBearerToken.getData())"]
+    private let apiHeaders = [
+                              APIKeys.Constants.authorizationKey: "\(APIKeys.Constants.bearerHeader)\(PlistKey.twitterBearerToken.getData())"]
 
     init(network: NetworkServiceable) {
         self.network = network
     }
 
-    func requestUserTweets(for userName: String, completion: @escaping ((Result<[TweetData], Error>) -> Void)) {
+    func requestUserTweets(for userName: String, completion: @escaping ((Result<TwitterUserWithData, Error>) -> Void)) {
         self.fetchUser(with: userName) { (result: Result<TwitterUser, Error>) in
             switch result {
             case .success(let user):
-                self.fetchTweets(userID: user.data.id, completion: completion)
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
-    }
-
-    private func fetchTweets(userID: String, completion: @escaping ((Result<[TweetData], Error>) -> Void)) {
-        let url = "https://\(PlistKey.twitterAPITweets.getData())\(userID))/tweets"
-        let model = NetworkModel(urlString: url,
-                                 headers: apiHeaders,
-                                 httpMethod: .get,
-                                 body: nil)
-        self.network.request(model: model) { (result: Result<Data, NetworkError>) in
-            switch result {
-            case .success(let data):
-                if let tweets = self.decodeTweets(data) {
-                    completion(.success(tweets.data))
-                    return
+                self.user = user
+                self.fetchUser(with: userName) { (result: Result<TwitterUser, Error>) in
+                    switch result {
+                    case .success(let user):
+                        self.user = user
+                        self.fetchTweets(userID: user.data.id, completion: completion)
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
                 }
-                completion(.failure(NetworkError.invalidJSON))
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
-
+    
     private func fetchUser(with username: String, completion: @escaping ((Result<TwitterUser, Error>) -> Void)) {
 
-        let url = "https://\(PlistKey.twitterAPIUser.getData())/\(username)"
+        let url = "https://\(PlistKey.twitterAPIUser.getData())\(username)"
         let model = NetworkModel(urlString: url,
                                  headers: apiHeaders,
                                  httpMethod: .get,
@@ -72,6 +62,27 @@ final class UserNetwork: UserNetworkable {
                 completion(.failure(NetworkError.invalidJSON))
             case .failure(let failure):
                 completion(.failure(failure))
+            }
+        }
+    }
+
+    private func fetchTweets(userID: String, completion: @escaping ((Result<TwitterUserWithData, Error>) -> Void)) {
+        let url = "https://\(PlistKey.twitterAPITweets.getData())\(userID)/tweets"
+        let model = NetworkModel(urlString: url,
+                                 headers: apiHeaders,
+                                 httpMethod: .get,
+                                 body: nil)
+        self.network.request(model: model) { (result: Result<Data, NetworkError>) in
+            switch result {
+            case .success(let data):
+                if let tweets = self.decodeTweets(data), let user = self.user {
+                    completion(.success(TwitterUserWithData(user: user,
+                                                            tweets: tweets.data)))
+                    return
+                }
+                completion(.failure(NetworkError.invalidJSON))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }

@@ -10,13 +10,16 @@ import XCTest
 import CoreProviders
 
 final class UserNetworkSuccessSpy: UserNetworkable {
-    func requestUserTweets(for userName: String, completion: @escaping ((Result<[TweetData], Error>) -> Void)) {
-        completion(.success([]))
+    func requestUserTweets(for userName: String, completion: @escaping ((Result<TwitterUserWithData, Error>) -> Void)) {
+        completion(.success(TwitterUserWithData(user: TwitterUser(data: TwitterUserData(id: String(),
+                                                                                        name: String(),
+                                                                                        username: String())),
+                                                tweets: [])))
     }
 }
 
 final class UserNetworkFailureSpy: UserNetworkable {
-    func requestUserTweets(for userName: String, completion: @escaping ((Result<[TweetData], Error>) -> Void)) {
+    func requestUserTweets(for userName: String, completion: @escaping ((Result<TwitterUserWithData, Error>) -> Void)) {
         completion(.failure(NetworkError.noResponse))
     }
 }

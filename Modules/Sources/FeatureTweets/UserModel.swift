@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct TwitterUserWithData {
+    let user: TwitterUser
+    let tweets: [TweetData]
+}
+
 struct TwitterUser: Codable {
     let data: TwitterUserData
 }
