@@ -31,7 +31,7 @@ public final class UserInputViewController: UIViewController {
         button.setTitle("Continuar", for: .normal)
         return button
     }()
-    private let progressView = UIProgressView()
+    private let progressView = UIActivityIndicatorView()
     private weak var delegate: FeatureTweetsDelegate?
     private var requester: UserRequestable
 
@@ -63,6 +63,7 @@ public final class UserInputViewController: UIViewController {
     private func requestUser() {
         self.requester.fetchUser(self.textField.text ?? String())
         self.progressView.isHidden = false
+        self.progressView.startAnimating()
         self.continueButton.isEnabled = false
     }
 
@@ -90,6 +91,9 @@ public final class UserInputViewController: UIViewController {
         self.progressView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.progressView)
         self.progressView.topAnchor.constraint(equalTo: self.continueButton.bottomAnchor, constant: 10).isActive = true
+        self.progressView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        self.progressView.color = .black
+        
     }
     
 }
@@ -97,14 +101,16 @@ public final class UserInputViewController: UIViewController {
 extension UserInputViewController: UserRequesterDelegate {
     func didReceive(_ user: TwitterUserWithData) {
         self.progressView.isHidden = true
+        self.progressView.stopAnimating()
         self.continueButton.isEnabled = true
         let viewController = UserTweetsViewController(tweetsAndUser: user,
                                                       delegate: self.delegate)
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
     func didReceiveError() {
         self.progressView.isHidden = true
+        self.progressView.stopAnimating()
         self.continueButton.isEnabled = true
         let alert = UIAlertController(title: "Ops!", message: "Erro, tente novamente", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

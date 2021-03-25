@@ -24,6 +24,7 @@ final class UserTweetsViewController: UIViewController {
         self.tableView.delegate = dataSource
         self.tableView.dataSource = dataSource
         self.setupView()
+        self.navigationItem.title = "@\(tweetsAndUser.user.data.username)"
     }
     
     @available(*, unavailable)
