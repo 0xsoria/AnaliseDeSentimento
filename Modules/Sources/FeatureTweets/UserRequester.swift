@@ -17,7 +17,7 @@ protocol UserRequestable {
     func fetchUser(_ userName: String)
 }
 
-final class UserRequester {
+final class UserRequester: UserRequestable {
 
     weak var userRequesterDelegate: UserRequesterDelegate?
     private let network: UserNetworkable
