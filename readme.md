@@ -20,6 +20,6 @@ App -> Features -> Core -> Root -> Dependencies
 
 ## Execução
 
-Abrir o MoodAnalyzer.xcworkspace, abrir o arquivo do projeto na aba Info e adicionar o arquivo APIConfig.xcconfig (que foi enviado por e-mail) para as configurações de Debug e Release.
+Abrir o MoodAnalyzer.xcworkspace, abrir o arquivo do projeto na aba Info e adicionar o arquivo APIConfig.xcconfig para as configurações de Debug e Release.
 
 
