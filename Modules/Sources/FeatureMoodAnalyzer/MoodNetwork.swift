@@ -24,7 +24,7 @@ final class MoodNetwork: MoodNetworkable {
     
     func requestMoodAnalysis(moodString: String, completion: @escaping ((Result<String, Errors>) -> Void)) {
         let mood = MoodAnalyzer(document: MoodDocument(type: .plainText,
-                                                        language: .pt,
+                                                        language: nil,
                                                         content: moodString),
                                 encodingType: .utf8)
         let moodData = try? JSONEncoder().encode(mood)

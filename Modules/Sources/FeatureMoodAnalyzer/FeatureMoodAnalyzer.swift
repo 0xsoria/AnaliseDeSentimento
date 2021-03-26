@@ -49,6 +49,7 @@ extension MoodAnalyzerViewController: MoodCheckerDelegate {
     }
     
     func didReceiveError() {
+        self.mainView.setLoadingView(false)
         let alert = UIAlertController(title: "Erro!", message: "Erro ao vefificar o sentimento, tente novamente.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Tente novamente", style: .default, handler: { _ in
             self.moodChecker.checkMood(for: self.tweet)

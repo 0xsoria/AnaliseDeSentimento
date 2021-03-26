@@ -14,7 +14,7 @@ struct MoodAnalyzer: Codable {
 
 struct MoodDocument: Codable {
     let type: ContentType
-    let language: Language
+    let language: String?
     let content: String
 }
 
@@ -33,7 +33,7 @@ enum Language: String, Codable {
 
 struct MoodReturn: Codable {
     let documentSentiment: MoodScore
-    let language: Language
+    let language: String
     let sentences: [MoodSentences]
 }
 
