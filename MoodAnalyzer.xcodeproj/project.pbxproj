@@ -11,27 +11,8 @@
 		1563B6CE2607C91E002EBCEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1563B6CD2607C91E002EBCEB /* SceneDelegate.swift */; };
 		1563B6D52607C91F002EBCEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1563B6D42607C91F002EBCEB /* Assets.xcassets */; };
 		1563B6D82607C91F002EBCEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1563B6D62607C91F002EBCEB /* LaunchScreen.storyboard */; };
-		1563B6E32607C91F002EBCEB /* MoodAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1563B6E22607C91F002EBCEB /* MoodAnalyzerTests.swift */; };
-		1563B6EE2607C91F002EBCEB /* MoodAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1563B6ED2607C91F002EBCEB /* MoodAnalyzerUITests.swift */; };
 		1563B71B2607D3A4002EBCEB /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = 1563B71A2607D3A4002EBCEB /* Modules */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1563B6DF2607C91F002EBCEB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1563B6C02607C91E002EBCEB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1563B6C72607C91E002EBCEB;
-			remoteInfo = MoodAnalyzer;
-		};
-		1563B6EA2607C91F002EBCEB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1563B6C02607C91E002EBCEB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1563B6C72607C91E002EBCEB;
-			remoteInfo = MoodAnalyzer;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1563B6C82607C91E002EBCEB /* MoodAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,12 +21,6 @@
 		1563B6D42607C91F002EBCEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1563B6D72607C91F002EBCEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1563B6D92607C91F002EBCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1563B6DE2607C91F002EBCEB /* MoodAnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodAnalyzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1563B6E22607C91F002EBCEB /* MoodAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnalyzerTests.swift; sourceTree = "<group>"; };
-		1563B6E42607C91F002EBCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1563B6E92607C91F002EBCEB /* MoodAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1563B6ED2607C91F002EBCEB /* MoodAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnalyzerUITests.swift; sourceTree = "<group>"; };
-		1563B6EF2607C91F002EBCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1563B71F2607D56E002EBCEB /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,20 +33,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1563B6DB2607C91F002EBCEB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1563B6E62607C91F002EBCEB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,8 +41,6 @@
 			children = (
 				1563B71F2607D56E002EBCEB /* APIConfig.xcconfig */,
 				1563B6CA2607C91E002EBCEB /* MoodAnalyzer */,
-				1563B6E12607C91F002EBCEB /* MoodAnalyzerTests */,
-				1563B6EC2607C91F002EBCEB /* MoodAnalyzerUITests */,
 				1563B6C92607C91E002EBCEB /* Products */,
 				1563B7192607D3A4002EBCEB /* Frameworks */,
 			);
@@ -91,8 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				1563B6C82607C91E002EBCEB /* MoodAnalyzer.app */,
-				1563B6DE2607C91F002EBCEB /* MoodAnalyzerTests.xctest */,
-				1563B6E92607C91F002EBCEB /* MoodAnalyzerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,24 +65,6 @@
 				1563B6D92607C91F002EBCEB /* Info.plist */,
 			);
 			path = MoodAnalyzer;
-			sourceTree = "<group>";
-		};
-		1563B6E12607C91F002EBCEB /* MoodAnalyzerTests */ = {
-			isa = PBXGroup;
-			children = (
-				1563B6E22607C91F002EBCEB /* MoodAnalyzerTests.swift */,
-				1563B6E42607C91F002EBCEB /* Info.plist */,
-			);
-			path = MoodAnalyzerTests;
-			sourceTree = "<group>";
-		};
-		1563B6EC2607C91F002EBCEB /* MoodAnalyzerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1563B6ED2607C91F002EBCEB /* MoodAnalyzerUITests.swift */,
-				1563B6EF2607C91F002EBCEB /* Info.plist */,
-			);
-			path = MoodAnalyzerUITests;
 			sourceTree = "<group>";
 		};
 		1563B7072607CA62002EBCEB /* MainScreen */ = {
@@ -165,42 +104,6 @@
 			productReference = 1563B6C82607C91E002EBCEB /* MoodAnalyzer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1563B6DD2607C91F002EBCEB /* MoodAnalyzerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1563B6F52607C91F002EBCEB /* Build configuration list for PBXNativeTarget "MoodAnalyzerTests" */;
-			buildPhases = (
-				1563B6DA2607C91F002EBCEB /* Sources */,
-				1563B6DB2607C91F002EBCEB /* Frameworks */,
-				1563B6DC2607C91F002EBCEB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1563B6E02607C91F002EBCEB /* PBXTargetDependency */,
-			);
-			name = MoodAnalyzerTests;
-			productName = MoodAnalyzerTests;
-			productReference = 1563B6DE2607C91F002EBCEB /* MoodAnalyzerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1563B6E82607C91F002EBCEB /* MoodAnalyzerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1563B6F82607C91F002EBCEB /* Build configuration list for PBXNativeTarget "MoodAnalyzerUITests" */;
-			buildPhases = (
-				1563B6E52607C91F002EBCEB /* Sources */,
-				1563B6E62607C91F002EBCEB /* Frameworks */,
-				1563B6E72607C91F002EBCEB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1563B6EB2607C91F002EBCEB /* PBXTargetDependency */,
-			);
-			name = MoodAnalyzerUITests;
-			productName = MoodAnalyzerUITests;
-			productReference = 1563B6E92607C91F002EBCEB /* MoodAnalyzerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,14 +115,6 @@
 				TargetAttributes = {
 					1563B6C72607C91E002EBCEB = {
 						CreatedOnToolsVersion = 12.4;
-					};
-					1563B6DD2607C91F002EBCEB = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 1563B6C72607C91E002EBCEB;
-					};
-					1563B6E82607C91F002EBCEB = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 1563B6C72607C91E002EBCEB;
 					};
 				};
 			};
@@ -237,8 +132,6 @@
 			projectRoot = "";
 			targets = (
 				1563B6C72607C91E002EBCEB /* MoodAnalyzer */,
-				1563B6DD2607C91F002EBCEB /* MoodAnalyzerTests */,
-				1563B6E82607C91F002EBCEB /* MoodAnalyzerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,20 +143,6 @@
 			files = (
 				1563B6D82607C91F002EBCEB /* LaunchScreen.storyboard in Resources */,
 				1563B6D52607C91F002EBCEB /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1563B6DC2607C91F002EBCEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1563B6E72607C91F002EBCEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,36 +158,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1563B6DA2607C91F002EBCEB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1563B6E32607C91F002EBCEB /* MoodAnalyzerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1563B6E52607C91F002EBCEB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1563B6EE2607C91F002EBCEB /* MoodAnalyzerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1563B6E02607C91F002EBCEB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1563B6C72607C91E002EBCEB /* MoodAnalyzer */;
-			targetProxy = 1563B6DF2607C91F002EBCEB /* PBXContainerItemProxy */;
-		};
-		1563B6EB2607C91F002EBCEB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1563B6C72607C91E002EBCEB /* MoodAnalyzer */;
-			targetProxy = 1563B6EA2607C91F002EBCEB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1563B6D62607C91F002EBCEB /* LaunchScreen.storyboard */ = {
@@ -480,90 +330,6 @@
 			};
 			name = Release;
 		};
-		1563B6F62607C91F002EBCEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H929RNU2C4;
-				INFOPLIST_FILE = MoodAnalyzerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Soria-Souza.MoodAnalyzerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoodAnalyzer.app/MoodAnalyzer";
-			};
-			name = Debug;
-		};
-		1563B6F72607C91F002EBCEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H929RNU2C4;
-				INFOPLIST_FILE = MoodAnalyzerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Soria-Souza.MoodAnalyzerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoodAnalyzer.app/MoodAnalyzer";
-			};
-			name = Release;
-		};
-		1563B6F92607C91F002EBCEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H929RNU2C4;
-				INFOPLIST_FILE = MoodAnalyzerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Soria-Souza.MoodAnalyzerUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MoodAnalyzer;
-			};
-			name = Debug;
-		};
-		1563B6FA2607C91F002EBCEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H929RNU2C4;
-				INFOPLIST_FILE = MoodAnalyzerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Soria-Souza.MoodAnalyzerUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MoodAnalyzer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,24 +347,6 @@
 			buildConfigurations = (
 				1563B6F32607C91F002EBCEB /* Debug */,
 				1563B6F42607C91F002EBCEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1563B6F52607C91F002EBCEB /* Build configuration list for PBXNativeTarget "MoodAnalyzerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1563B6F62607C91F002EBCEB /* Debug */,
-				1563B6F72607C91F002EBCEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1563B6F82607C91F002EBCEB /* Build configuration list for PBXNativeTarget "MoodAnalyzerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1563B6F92607C91F002EBCEB /* Debug */,
-				1563B6FA2607C91F002EBCEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

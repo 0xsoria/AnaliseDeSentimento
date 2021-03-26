@@ -29,6 +29,8 @@ public final class UserInputViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.black, for: .normal)
         button.setTitle("Continuar", for: .normal)
+        button.layer.cornerRadius = 10
+        button.backgroundColor = .systemBlue
         return button
     }()
     private let progressView = UIActivityIndicatorView()
@@ -59,7 +61,7 @@ public final class UserInputViewController: UIViewController {
     public func setupDelegate(_ delegate: FeatureTweetsDelegate) {
         self.delegate = delegate
     }
-    
+
     private func requestUser() {
         self.requester.fetchUser(self.textField.text ?? String())
         self.progressView.isHidden = false
