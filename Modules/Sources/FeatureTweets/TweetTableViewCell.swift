@@ -59,6 +59,5 @@ final class TweetTableViewCell: UITableViewCell {
         self.stack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
 
         self.userLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        self.tweetLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
     }
 }

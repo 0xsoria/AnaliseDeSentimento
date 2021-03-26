@@ -19,6 +19,7 @@ public final class RootViewController: UIViewController {
                                                   network: self.networkService)
         super.init(nibName: nil, bundle: nil)
         self.userTweets.setupDelegate(self)
+        self.navigationItem.title = "Sentimento do Tweet"
     }
     
     @available(*, unavailable)

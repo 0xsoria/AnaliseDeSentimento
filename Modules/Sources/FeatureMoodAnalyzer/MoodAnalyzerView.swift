@@ -87,11 +87,13 @@ final class MoodAnalyzerView: UIView {
         self.addSubview(self.moodLabel)
         self.addSubview(self.moodLabelTitle)
         
-        
+        //title label
         self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
         self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        self.titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        self.titleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        //tweet label
         self.tweetLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor,
                                              constant: 20).isActive = true
         self.tweetLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,
@@ -103,7 +105,7 @@ final class MoodAnalyzerView: UIView {
         self.moodLabelTitle.topAnchor.constraint(equalTo: self.tweetLabel.bottomAnchor, constant: 50).isActive = true
         self.moodLabelTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         self.moodLabelTitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        self.moodLabelTitle.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        self.moodLabelTitle.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         //mood label
         self.moodLabel.topAnchor.constraint(equalTo: self.moodLabelTitle.bottomAnchor, constant: 10).isActive = true
