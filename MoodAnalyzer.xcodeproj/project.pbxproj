@@ -21,7 +21,7 @@
 		1563B6D42607C91F002EBCEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1563B6D72607C91F002EBCEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1563B6D92607C91F002EBCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1563B71F2607D56E002EBCEB /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
+		1563B73F260D7C11002EBCEB /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 		1563B6BF2607C91E002EBCEB = {
 			isa = PBXGroup;
 			children = (
-				1563B71F2607D56E002EBCEB /* APIConfig.xcconfig */,
+				1563B73F260D7C11002EBCEB /* APIConfig.xcconfig */,
 				1563B6CA2607C91E002EBCEB /* MoodAnalyzer */,
 				1563B6C92607C91E002EBCEB /* Products */,
 				1563B7192607D3A4002EBCEB /* Frameworks */,
@@ -174,7 +174,7 @@
 /* Begin XCBuildConfiguration section */
 		1563B6F02607C91F002EBCEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1563B71F2607D56E002EBCEB /* APIConfig.xcconfig */;
+			baseConfigurationReference = 1563B73F260D7C11002EBCEB /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -236,7 +236,7 @@
 		};
 		1563B6F12607C91F002EBCEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1563B71F2607D56E002EBCEB /* APIConfig.xcconfig */;
+			baseConfigurationReference = 1563B73F260D7C11002EBCEB /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
